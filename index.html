@@ -453,9 +453,127 @@
         </section>
 
     </kino-slide>
-    docker run -d --link mad_mayer:db_1 -p 3000:3000 -e "NODE_ENV=development" "rohitghatol/web"
 
+    <kino-slide x="21000">
+        <section class="slide">
+            <header>
+                <h1>Docker Use Case Revisited</h1>
+            </header>
+            <section class="content">
+                <div style="padding-left:120px;padding-top:10px">
+                    <img width="80%" src="images/Docker-UseCase-Details.png">
+                </div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
 
+    </kino-slide>
+
+    <kino-slide x="22000">
+        <section class="slide">
+            <header>
+                <h1>Fig Configuration (fig.yml)</h1>
+            </header>
+            <section class="content">
+<pre><code style="font-size:22px">web:
+    build: .
+    links:
+        - db
+    ports:
+        - "3000:3000"
+    environment:
+        NODE_ENV: development
+db:
+    image: mongo
+    ports:
+        - "27017:27017"
+</code></pre>
+
+                </div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+
+    <kino-slide x="23000">
+        <section class="slide">
+            <header>
+                <h1>Fig Configuration (fig.yml)</h1>
+            </header>
+            <section class="content">
+                <div>$>fig build</div>
+                <div>$>fig up</div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+    <kino-slide x="24000">
+        <section class="slide">
+            <header>
+                <h1>Limitations of Docker Link</h1>
+            </header>
+            <section class="content">
+                While Docker --link is a create way to abstract dependency between docker containers it has a limitation that
+                it only works on docker containers running on the same machine. In Production Scenario our Docker containers
+                will run on different machines. And we need the docker link to work across multiple machine.
+                There are numerous ways to address that problem, we are listing few down
+                <ul>
+                    <li>Flocker</li>
+                    <li>Ambassador Pattern</li>
+                </ul>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+
+    <kino-slide x="24000">
+        <section class="slide">
+            <header>
+                <h1>Future of Docker</h1>
+            </header>
+            <section class="content">
+                <ul>
+                    <li>Support in Amazon AWS and Google Cloud (Q4 2014)</li>
+                    <li>Docker Machine, Swarm, Compose (H2 2015)</li>
+                </ul>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
 
 </kino-pres>
 
