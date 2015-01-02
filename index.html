@@ -396,7 +396,7 @@
                 <div>RUN apt-get install -y nodejs</div>
                 <div>RUN mkdir /var/www</div>
                 <div><br></div>
-                <div>ADD app.js /var/www/app.js</div>
+                <div>RUN git clone http://github.com/rohitghatol/mean-docker /var/www</div>
                 <div><br></div>
                 <div>CMD ["/usr/bin/node", "/var/www/app.js"]</div>
             </section>
@@ -410,6 +410,55 @@
         </section>
 
     </kino-slide>
+
+    <kino-slide x="19000">
+        <section class="slide">
+            <header>
+                <h1>Web uses Env Variable to talk to MongoDB</h1>
+            </header>
+            <section class="content">
+                <div>Mongo DB Connection String</div>
+                <div>'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/db'</div>
+                <div><br></div>
+                <div>Environment Variable</div>
+                <div>DB_1_PORT_27017_TCP_ADDR</div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+    <kino-slide x="20000">
+        <section class="slide">
+            <header>
+                <h1>Start Web Docker Container linking it with DB Container</h1>
+            </header>
+            <section class="content">
+                <div>Mongo DB Connection String</div>
+                <div>'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/db'</div>
+                <div><br></div>
+                <div>Environment Variable</div>
+                <div>DB_1_PORT_27017_TCP_ADDR</div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+    docker run -d --link mad_mayer:db_1 -p 3000:3000 -e "NODE_ENV=development" "rohitghatol/web"
+
+
+
 </kino-pres>
 
 </body>
