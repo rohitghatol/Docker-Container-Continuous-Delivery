@@ -550,16 +550,34 @@ db:
     <kino-slide x="25000">
         <section class="slide">
             <header>
-                <h1>Limitations of Docker Link</h1>
+                <h1>Limitations of Docker</h1>
             </header>
             <section class="content">
-                While Docker --link is a create way to abstract dependency between docker containers it has a limitation that
-                it only works on docker containers running on the same machine. In Production Scenario our Docker containers
-                will run on different machines. And we need the docker link to work across multiple machine.
-                There are numerous ways to address that problem, we are listing few down
                 <ul>
-                    <li>Flocker</li>
-                    <li>Ambassador Pattern</li>
+                    <li>Requires Linux to work - Dev Environment on Windows and Mac needs Virtual Box</li>
+                    <li>Docker Link to connect two Docker Containers works only on same Machine</li>
+                    <li>Numerous solutions for Multi Node Docker Containers</li>
+                </ul>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+    <kino-slide x="26000">
+        <section class="slide">
+            <header>
+                <h1>Docker Ecosystem</h1>
+            </header>
+            <section class="content">
+                <ul>
+                    <li>Numerous solutions for Multi Node Docker Containers - Flocker, Supervisor etc</li>
+                    <li><a href="http://www.mindmeister.com/389671722/docker-ecosystem" target="_blank">Docker Ecosystem Mind Map</a> </li>
                 </ul>
             </section>
             <footer>
@@ -573,14 +591,14 @@ db:
 
     </kino-slide>
 
-    <kino-slide x="26000">
+    <kino-slide x="27000">
         <section class="slide">
             <header>
                 <h1>Future of Docker</h1>
             </header>
             <section class="content">
                 <ul>
-                    <li>Support in Amazon AWS and Google Cloud (Q4 2014)</li>
+                    <li>Support in Amazon AWS, Google Cloud and Microsoft Azure (Q4 2014)</li>
                     <li>Docker Machine, Swarm, Compose (H2 2015)</li>
                 </ul>
             </section>
