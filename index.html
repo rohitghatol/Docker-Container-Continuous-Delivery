@@ -216,7 +216,53 @@
         </section>
 
     </kino-slide>
+
     <kino-slide x="10000">
+        <section class="slide">
+            <header>
+                <h1>Docker File System</h1>
+            </header>
+            <section class="content">
+                <div style="padding-left:120px;padding-top:0px">
+                    <img width="70%" src="images/docker-fs.png">
+                </div>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+    <kino-slide x="11000">
+        <section class="slide">
+            <header>
+                <h1>Docker File System</h1>
+            </header>
+            <section class="content">
+                <ul>
+                    <li>Each layer of fs mounted on top of previous layers</li>
+                    <li>First Layer called base layer</li>
+                    <li>Current base image includes debian,ubuntu, busybox, fedora,cent os, etc</li>
+                    <li>Each Read Only Layer is called Image</li>
+                    <li>Top Layer is the only modifiable layer - It's called the container</li>
+                </ul>
+            </section>
+            <footer>
+                <hr/>
+                <figure class="logo">
+                    <img src="images/synerzip-logo.png"></img>
+                    <figureCaption></figureCaption>
+                </figure>
+            </footer>
+        </section>
+
+    </kino-slide>
+
+    <kino-slide x="12000">
         <section class="slide">
             <header>
                 <h1>Docker Use Case</h1>
@@ -237,7 +283,7 @@
 
     </kino-slide>
 
-    <kino-slide x="11000">
+    <kino-slide x="13000">
         <section class="slide">
             <header>
                 <h1>Search Mongo DB Docker Image</h1>
@@ -258,7 +304,7 @@
 
     </kino-slide>
 
-    <kino-slide x="12000">
+    <kino-slide x="14000">
         <section class="slide">
             <header>
                 <h1>Pull the Mongo DB Image</h1>
@@ -279,7 +325,7 @@
 
     </kino-slide>
 
-    <kino-slide x="13000">
+    <kino-slide x="15000">
         <section class="slide">
             <header>
                 <h1>Run Mongo DB Docker as a Daemon</h1>
@@ -300,7 +346,7 @@
 
     </kino-slide>
 
-    <kino-slide x="14000">
+    <kino-slide x="16000">
         <section class="slide">
             <header>
                 <h1>Make Modification to Mongo DB Image</h1>
@@ -321,7 +367,7 @@
 
     </kino-slide>
 
-    <kino-slide x="15000">
+    <kino-slide x="17000">
         <section class="slide">
             <header>
                 <h1>Commit the Modifications Locally</h1>
@@ -342,7 +388,7 @@
 
     </kino-slide>
 
-    <kino-slide x="16000">
+    <kino-slide x="18000">
         <section class="slide">
             <header>
                 <h1>Push the Modifications as a new Image for Team to consume</h1>
@@ -362,7 +408,7 @@
         </section>
 
     </kino-slide>
-    <kino-slide x="17000">
+    <kino-slide x="19000">
         <section class="slide">
             <header>
                 <h1>Create a Docker file for Web</h1>
@@ -383,7 +429,7 @@
 
     </kino-slide>
 
-    <kino-slide x="18000">
+    <kino-slide x="20000">
         <section class="slide">
             <header>
                 <h1>DockerFile for Web</h1>
@@ -411,7 +457,7 @@
 
     </kino-slide>
 
-    <kino-slide x="19000">
+    <kino-slide x="21000">
         <section class="slide">
             <header>
                 <h1>Web uses Env Variable to talk to MongoDB</h1>
@@ -433,7 +479,7 @@
         </section>
 
     </kino-slide>
-    <kino-slide x="20000">
+    <kino-slide x="22000">
         <section class="slide">
             <header>
                 <h1>Create Docker Image from DockerFile</h1>
@@ -453,7 +499,7 @@
         </section>
 
     </kino-slide>
-    <kino-slide x="21000">
+    <kino-slide x="23000">
         <section class="slide">
             <header>
                 <h1>Start Web Docker Container linking it with DB Container</h1>
@@ -474,7 +520,7 @@
 
     </kino-slide>
 
-    <kino-slide x="22000">
+    <kino-slide x="24000">
         <section class="slide">
             <header>
                 <h1>Docker Use Case Revisited</h1>
@@ -495,7 +541,7 @@
 
     </kino-slide>
 
-    <kino-slide x="23000">
+    <kino-slide x="25000">
         <section class="slide">
             <header>
                 <h1>Fig Configuration (fig.yml)</h1>
@@ -528,7 +574,7 @@ db:
 
     </kino-slide>
 
-    <kino-slide x="24000">
+    <kino-slide x="26000">
         <section class="slide">
             <header>
                 <h1>Fig Configuration (fig.yml)</h1>
@@ -547,7 +593,7 @@ db:
         </section>
 
     </kino-slide>
-    <kino-slide x="25000">
+    <kino-slide x="27000">
         <section class="slide">
             <header>
                 <h1>Limitations of Docker</h1>
@@ -569,7 +615,7 @@ db:
         </section>
 
     </kino-slide>
-    <kino-slide x="26000">
+    <kino-slide x="28000">
         <section class="slide">
             <header>
                 <h1>Docker Ecosystem</h1>
@@ -591,7 +637,7 @@ db:
 
     </kino-slide>
 
-    <kino-slide x="27000">
+    <kino-slide x="29000">
         <section class="slide">
             <header>
                 <h1>Future of Docker</h1>
