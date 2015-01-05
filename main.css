@@ -16,6 +16,7 @@ kino-slide .slide {
     position:relative;
     padding: 20px;
     opacity: 1;
+    background:white;
 }
 
 
